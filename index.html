@@ -34,13 +34,13 @@
     <section id="sec-normative-references">
       <ul>
         <li>
-          <cite id="bib-w3c-rec-xmlschema-1-20041028">
+          <cite id="bib-w3c-xmlschema-1">
             W3C Recommendation XML Schema Part 1: Structures Second Edition</cite>
           , 28 October 2004
           , <a>http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/</a>
         </li>
         <li>
-          <cite id="bib-w3c-rec-xmlschema-2-20041028">
+          <cite id="bib-w3c-xmlschema-2">
             W3C Recommendation XML Schema Part 2: Datatypes Second Edition</cite>
           , 28 October 2004
           , <a>http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/</a>
@@ -80,7 +80,7 @@
           Any document that (a) is defined by an Engineering Document
           and (b) conforms to Extensible Markup Language (XML) 1.0,
           whether within the prose or as an Additional Element, shall
-          be licensed according to <a href="#annex-a"></a>.
+          be licensed according to <a href="#sec-document-license"></a>.
         </p>
       </section>
 
@@ -89,7 +89,7 @@
         <p>
           Additional Elements of Engineering Documents that conform to
           Extensible Markup Language (XML) 1.0 should include the text
-          of <a href="#annex-b"></a>, at the head of document and with the text
+          of <a href="#sec-element-header"></a>, at the head of document and with the text
           between triple brackets replaced as specified.
         </p>
       </section>
@@ -106,8 +106,8 @@
           vocabularies (attributes and elements), and provide an
           unambiguous and human-readable link to the specifications
           that define these vocabularies. Each XML namespace has its
-          unique name, which is a URI that conforms to RFC
-          3986. <a href="#sec-auto"></a>
+          unique name, which is a URI that conforms to
+          <a href="#bib-ietf-rfc-3986"></a>.
         </p>
       </section>
 
@@ -319,314 +319,262 @@
         </p>
         <p>
           The XML Namespace Definition Document should conform to
-          HTML, as specified in HTML 5.2 <a href="#sec-none"></a>.
+          HTML, as specified in <a href="#bib-w3c-rec-html"></a>.
         </p>
         <p>
-          <a href="#annex-c"></a> lists a sample XML Namespace
+          <a href="#sec-sample-namespace"></a> lists a sample XML Namespace
           Definition Document.
         </p>
       </section>
-      <!-- 5.7 -->
+
+      <section id="sec-legacy-compatibility">
+        <h3>Compatibility with Legacy XML Namespace URI Syntax</h3>
+        <p>
+          Earlier versions of this Administrative Guideline specified
+          a substantially different syntax for XML Namespace URIs. For
+          instance, the string "schemas" was used instead of "ns" and
+          a number sign ("#") character could terminate the URI, with
+          an otherwise empty fragment identifier component. This
+          syntax is deprecated.
+        </p>
+        <p>
+          Published Engineering Documents that conform to prior
+          versions of this specification, as well as their revisions
+          and amendments, may continue to do so.
+        </p>
+      </section>
+    </section>
+
+    <section id="sec-schema">
+      <h2>XML Schema</h2>
+
+      <section id="sec-schema-introduction">
+        <h3>Introduction (informative)</h3>
+        <p>
+          Using a formal language like XML Schema,
+          <a href="#bib-w3c-xmlschema-1"></a>, to describe conformance
+          requirements can avoid some of the ambiguity inherent with
+          using English prose alone, while allowing the use of
+          existing commercial tools to facilitate testing and
+          validation.
+        </p>
+        <p class="note">
+          The following provisions are derived in part from Good
+          Practice 11 at W3C QA Framework: Specification Guidelines,
+          Formal Languages, Good Practice E. and Guidelines for the
+          use of formal languages in IETF specifications.
+        </p>
+      </section>
+
+      <section id="sec-using-schema>">
+        <h3>Using XML Schema</h3>
+        <p>
+          XML Schema, as specified in
+          <a href="#bib-w3c-xmlschema-1"></a>, may be used normatively
+          or informatively in an Engineering Document, either by
+          inclusion or by reference.
+        </p>
+      </section>
+
+      <section id="sec-precdence">
+        <h3>Precedence</h3>
+        <p>
+          Engineering Documents may specify a policy in case of a
+          conflict between prose and XML Schema. In absence of such
+          policy, the precedence rules specified in the Conformance
+          section of AG-04 applies.
+        </p>
+      </section>
+
+      <section id="sec-discrepancies">
+        <h3>Avoiding Discrepancies</h3>
+        <p>
+          To help avoid discrepancies between the English prose and
+          the XML Schema, prose sections should be bound to the
+          related portion of the XML Schema, so that one cannot be
+          modified without the other.
+        </p>
+        <p class="note">
+          One method to bind prose to XML Schema is to include XML
+          Schema definitions inline within the prose. Another method
+          is for the prose to refer to XML Schema definitions
+          specified in appendices or Additional Elements.
+        </p>
+        <p>
+          Any Additional Element that conforms to XML Schema, and
+          duplicates normative XML Schema definitions specified in the
+          Prose Element, shall be normative.
+        </p>
+        <p class="note">
+          Informative XML Schema definitions can be used as examples,
+          e.g. to demonstrate how to define an extension to another
+          XML Schemas through the <code>&lt;xs:any&gt;</code> mechanism.
+        </p>
+      </section>
+
+      <section id="sec-language-version">
+        <h3>Language Version</h3>
+        <p>
+          Whenever an XML Schema is provided and any portion of it is
+          normative, the Engineering Document shall provide a
+          normative reference to the XML Schema specification it
+          conforms to.
+        </p>
+        <p>
+          It is also recommended that a reference (although it may be
+          bibliographic) be made to the XML language specification
+          itself.
+        </p>
+      </section>
+
+      <section id="sec-external-definitions">
+        <h3>External Definitions</h3>
+        <p>
+          The defining document of any externally-defined XML
+          namespaces shall be included as a normative reference if the
+          XML schema is normative.
+        </p>
+      </section>
+
+      <section id="sec-formed-definitions">
+        <h3>Well-Formed Definitions</h3>
+        <p>
+          All XML Schema defined in a SMPTE Engineering Document shall
+          be well-formed and valid with respect to the XML Schema
+          language.
+        </p>
+      </section>
+
+      <section id="sec-example-instances">
+        <h3>Example Instances</h3>
+        <p>
+          All example instance documents shall be informative.
+        </p>
+        <p>
+          All example instance documents shall be well-formed. If an
+          example instance document is document, then it shall be
+          valid with respect to the XML Schema defined.
+        </p>
+        <p>
+          Graphical representations of the schema structure should be
+          included when it adds clarity.
+        </p>
+      </section>
+
+      <section id="sec-publication">
+        <h3>Publication</h3>
+        <p>
+          All Additional Elements of Engineering Documents conforming
+          to XML Schema shall be publically retrievable at an HTTP URI
+          chosen by the Director of Engineering.
+        </p>
+        <p class="note">
+          The same URI is also listed in the Namespace Definition
+          Document per Section 5.5 if the XML Schema Document
+          specifies a target namespace.
+        </p>
+      </section>
+    </section>
+    
+    <section class="annex" id="sec-document-license">
+      <h2>XML Document License</h2>
+      <pre>
+    Copyright (c), Society of Motion Pictures and Television Engineers. All rights
+    reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+
+    1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+    IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+    TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+    PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+    HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+    TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+    PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+    LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
+    </section>
+
+    <section class="annex" id="sec-element-header">
+      <h2>XML Element Header</h2>
+      <pre>
+    &lt;!--
+    [[TEXT OF XML DOCUMENT LICENSE OF SECTION ANNEX A IN AG-05]]
+    --&gt;
+    
+    &lt;!--
+    This document can be retrieved at
         
-          
-      
+       [[[INSERT URI WHERE THE DOCUMENT IS PUBLISHED]]]
+        
+    and is an element of
+        
+       [[[INSERT SMPTE DOCUMENT REFERENCE]]] ,
+        
+    which is available at http://standards.smpte.org.
+
+        
+    To ensure interoperability, users are encouraged to:
+
+    (a) retain this notice;
+        
+    (b) retrieve the recent versions of this document and its companion
+    defining engineering document. In particular, this document alone might
+    not be sufficient to ensure interoperability;
+        
+    (c) highlight and explain any modification they make to this document; and
+        
+    (d) report issues to [[[INSERT SMPTE CONTACT]]].
+    --></pre>
     </section>
 
+    <section class="annex" id="sec-sample-namespace">
+      <h2>Sample XML Namespace Definition Document (informative)</h2>
+      <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+     &lt;head&gt;
+      &lt;meta charset="utf-8" /&gt;
+      &lt;title&gt;XML Namespace Definition Document for ST 2071-2&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+      &lt;div&gt;
+       &lt;p&gt;This namespace is specified in
+       SMPTE ST 2071-2:2016&lt;/p&gt;
+       &lt;p&gt;
+       st2071-2q-2016.xsd is an XML Schema document associated with the namespace.&lt;/p&gt;
+       &lt;p&gt;
+       st2071-2r-2016.wsdl is a WSDL document associated with the namespace.&lt;/p&gt;
+      &lt;/div&gt;
+     &lt;/body&gt;
+    &lt;/html&gt;</pre>
+    </section>
 
-
-    
-      
-  
-
-
-
-    
-  <section id="sec-smpte-json-structures">
-    <h2>SMPTE JSON structures</h2>
-    <section id="sec-overview">
-      <h3>Overview (informative)</h3> 
-      The JSON Schema resource applicable to a JSON structure can specify constraints to which the structure is expected to conform.
+    <section id="sec-bibliographic-references">
+      <ul>
+        <li><cite id="bib-draft-bhutton-json-schema-00">IETF
+            draft-bhutton-json-schema-00</cite>, Wright, A., H. Andrews; B. Hutton, G.
+          Dennis, "JSON Schema: A Media Type for Describing JSON Documents", Work in
+          Progress, December 8, 2020,
+          https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00
+        </li>
+      </ul>
     </section>
     
-    <section id="sec-json-structures">
-      <h3>JSON Structures</h3>
-      
-      <p>
-        A <dfn>SMPTE JSON structure</dfn> is any data structure that (a) is specified by an
-        Engineering Document and (b) conforms to <a
-        href="#bib-ietf-rfc-8259"></a> (i.e., a JSON document), whether within
-        the prose or as an Additional Element.
-      </p>
-      
-      <p>
-        The structure of each <a>SMPTE JSON structure</a> shall be normatively specified
-        the Engineering Document.
-      </p>
-      <p>
-        Each SMPTE JSON structure should be informatively specified by a JSON Schema
-        resource, which may be a SMPTE JSON Schema resource (see section 5), using
-        the JSON Schema language as specified in <a href="#bib-draft-bhutton-json-schema-00"></a>.
-      </p>
-    </section>
-    
-  </section>
-
-<section id="sec-smpte-json-schema-resources">
-  <h2>SMPTE JSON Schema resources</h2>
-  
-  <section id="sec-introduction">
-    <h3>Introduction (informative)</h3>
-    
-    <p>Using the formal language of JSON Schema, descriptions of conformance
-    requirements for JSON structures can avoid some of the ambiguity inherent with
-    using English prose alone, while allowing the use of existing commercial tools
-    to facilitate testing and validation. It can also represent a significant
-    convenience to implementers, for example by supporting the ability to
-    automatically validate structures.</p>
-    
-    <p>Sample relative link to a <a href="sample.png">picture</a>.</p>
-
-  </section>
-  
-  <section id="sec-canonical-uri">
-    <h3>Canonical URI</h3>
-    
-    <section id="sec-id-keyword">
-      <h4><code>$id</code> Keyword</h4>
-      
-      <p>A SMPTE JSON Schema resource shall use the <code>$id</code> keyword in the root schema
-      object, thereby providing the canonical URI for the JSON root schema.</p>
-    </section>
-    
-    <section id="sec-canonical-uri-syntax">
-      <h4>Canonical URI Syntax</h4>
-      
-      The canonical URI shall conform to the <code>SCHEMAID</code> syntax below,
-      specified using <a href="#bib-ietf-rfc-5234"></a> and <a
-      href="#bib-ietf-rfc-7405"></a> and conforming to <a
-      href="#bib-ietf-rfc-3986"></a>.
-      
-<pre>
-SCHEMAID = %s"https://www.smpte-ra.org/json-schema/" PUBNUM "/" REVISION [ "/" SHORTNAME]
-SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
-PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
-REVISION = STABLEREV
-STABLEREV = 4(DIGIT) [2(DIGIT)]
-</pre>
-      
-      <p><code>PUBNUM</code> shall represent the official publication number of the
-      Engineering Document, without leading zeroes and including a part number, if
-      any, separated by a hyphen, e.g., 456-1.</p>
-      
-      <p class="note">The <code>REVISION</code> component of a stable SMPTE JSON
-      Schema canonical URI does not necessarily correspond to the publication
-      date of its defining Engineering Document. For instance, the defining
-      Engineering Document can be revised in such a way that the contents of the
-      JSON Schema remain unchanged.</p>
-      
-      <p class="note">
-        No changes to SMPTE JSON Schema canonical URI are necessary following a Draft
-        Publication ballot since SMPTE JSON Schema canonical URI are constructed
-        independently of the publication date of the Engineering Document.
-      </p>
-    </section>
-    
-    <section id="sec-examples">
-      <h4>Examples (informative)</h4>
-      The following is an example SMPTE JSON Schema resource canonical URI:
-      
-      <pre>https://www.smpte-ra.org/json-schema/456/2021/foo</pre>
-      
-      <p><a href="#table-examples"></a> lists examples.</p>
-
-      <table id="table-examples">
-        <caption>Examples</caption>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>URI</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hello</td>
-            <td>https://www.smpte-ra.org/json-schema/456/2021/foo</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    
-    <section id="sec-registration">
-      <h4>Registration (informative)</h4>
-      
-      <p>
-        The SMPTE JSON Schema resource canonical URI syntax ensures uniqueness across
-        Engineering Documents, and thus no specific registration steps are required.
-      </p>
-
-      <p><a href="#figure-process-flowchart"></a> shows an example of the process.</p>
-
-      <figure id="figure-process-flowchart">
-        <figcaption>Example of the Process</figcaption>
-        <img class="figure" src="sample.png">
-      </figure>
-      
-    </section>
-  </section>
-  
-  <section id="sec-using-a-smpte-json-schema-resource">
-    <h3>Using a SMPTE JSON Schema Resource</h3>
-    
-    <p>A SMPTE JSON Schema resource can be used informatively by an Engineering
-    Document, either by inclusion or by reference.</p>
-    
-    <p class="note">The current specification of JSON Schema, though well-supported, is not a
-    normatively referenceable document per the Standards Operations Manual (section
-    10 Normative References) and AG-03. Thus, provision of SMPTE JSON Schema
-    resources, at this time, is strictly informative.</p>
-  </section>
-    
-  <section id="sec-version">
-    <h3>Version</h3>
-    
-    <p>
-      Whenever a SMPTE JSON Schema resource is provided, the Engineering Document
-      shall provide an informative reference to the JSON Schema language specification
-      to which it conforms (e.g., JSON Schema, as shown in the Bibliography).
-    </p>
-    
-    <p>
-      A SMPTE JSON Schema resource shall use the <code>$schema</code> keyword in the root schema
-      object.
-    </p>
-    
-    <p class="note">
-      the <code>$schema</code> keyword is both used as JSON Schema dialect identifier and
-      as the identifier of a resource which is itself a JSON Schema resource to
-      evaluate conformance to that dialect.
-    </p>
-    
-    <p class="note">
-      JSON Schema resources can comprise subschemas, where portions of a root
-      schema document are separately identifiable by a URI-reference that are not
-      absolute and/or contain non-empty fragments.  For example,
-      <code>https://smpte-ra.org/schemas/2120-2/2021/smpte-tlx-items/definitions/rationalType</code>
-      is a reference to a subschema within the SMPTE JSON Schema resource
-      <code>https://smpte-ra.org/schemas/2120-2/2021/smpte-tlx-items</code>
-      where the subschema represents the constraints for a JSON structure
-      representing a rational value.
-    </p>
-    
-  </section>
-  
-  <section id="sec-keyword-order">
-    <h3>Keyword Order</h3>
-    
-    <p>The following keywords should appear as the first keywords in any SMPTE JSON Schema resource in this order:</p>
-    
-    <ul>
-      <li><code>$schema,</code> as specified in <a href="#sec-version"></a></li>
-      <li><code>$id,</code> as specified in <a href="#sec-id-keyword"></a>; and,</li>
-      <li><code>$comment,</code> as specified in <a
-      href="#sec-cc-license-schema-resources"></a>.</li>
-    </ul>
-
-  </section>
-</section>
-
-<section id="sec-copyright-and-license">
-  <h2>Copyright and License</h2>
-  
-  <section id="sec-license">
-    <h3>License</h3>
-    
-    <p>
-      Any SMPTE JSON structure or SMPTE JSON Schema resource, whether provided within
-      the prose or as an Additional Element of an Engineering Document, shall be
-      licensed according to <a href="#sec-json-document-license"></a>.
-    </p>
-    
-    <p class="note">
-      The license portion of Annex A is verbatim the BSD-3-Clause license
-      available at <a>https://spdx.org/licenses/BSD-3-Clause.html</a>.
-    </p>
-  </section>
-  
-  <section id="sec-cc-license-schema-resources">
-    <h3>Copyright and License in SMPTE JSON Schema resources</h3>
-    
-    Any SMPTE JSON Schema resource shall include the copyright and license
-    provided in <a href="#sec-json-document-license"></a> in the form of the
-    <code>$comment</code> element specified in <a href="#sec-license-element"></a>.
-  </section>
-</section>
-
-<section class="annex" id="sec-json-document-license">
-  <h2>JSON Document License</h2>
-
-  <section id="sec-copyright-element">
-    <h3>Copyright Element</h3>
-<pre>
-Copyright (c), Society of Motion Pictures and Television Engineers. 
-
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met: 
-</pre>
-<p><a href="#table-copyright-forms"></a> lists copyright forms.</p>
-<table id="table-copyright-forms">
-  <caption>Copyright Forms</caption>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>(c)</td>
-    </tr>
-    <tr>
-      <td>©</td>
-    </tr>
-  </tbody>
-</table>
-  </section>
-
-  <section id="sec-license-element">
-    <h3>License Element</h3>
-
-  <p>The following example JSON Schema incorporates the above element in
-  accordance with <a href="#sec-cc-license-schema-resources"></a>, with the initial
-  keyword order recommended in <a href="#sec-keyword-order"></a>.</p>
-
-<pre>
-{
-  "$schema": "https://json-schema.org/draft/2020-12/meta/core",
-  "$id": "https://smpte-ra.org/json-schema/2199-1/2022/foo",
-  "$comment": "Copyright (c), Society of Motion Pictures and Television Engineers. Licensed under BSD-3-Clause (https://spdx.org/licenses/BSD-3-Clause.html).",
-  "title": "foo",
-  "type": "object",
-  "description": "This is an example schema for a fictitious foo object.",
-  "examples": [
-    {
-      "bar": "zyzx"
-    }
-}  
-</pre>
-
-  </section>
-</section>
-
-<section id="sec-bibliographic-references">
-  <ul>
-    <li><cite id="bib-draft-bhutton-json-schema-00">IETF
-    draft-bhutton-json-schema-00</cite>, Wright, A., H. Andrews; B. Hutton, G.
-    Dennis, "JSON Schema: A Media Type for Describing JSON Documents", Work in
-    Progress, December 8, 2020.
-    <a>https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00</a>
-    </li>
-  </ul>
-</section>
-
-</body>
-
+  </body>
 </html>
