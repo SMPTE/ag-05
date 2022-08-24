@@ -148,12 +148,12 @@
             The name of a SMPTE XML Namespace shall conform to the NS syntax below specified using RFC 7405:
           </p>
           <pre>
-    NS = %s"http://www.smpte-ra.org/ns/" PUBNUM "/" REVISION [ "/" SHORTNAME]
-    SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
-    PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
-    REVISION = STABLEREV / EXPREV
-    STABLEREV = 4(DIGIT) [2(DIGIT)]
-    EXPREV = %s"experimental-" 1*(ALPHA / DIGIT / "-" / "_" / ".")</pre>
+NS = %s"http://www.smpte-ra.org/ns/" PUBNUM "/" REVISION [ "/" SHORTNAME]
+SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
+PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
+REVISION = STABLEREV / EXPREV
+STABLEREV = 4(DIGIT) [2(DIGIT)]
+EXPREV = %s"experimental-" 1*(ALPHA / DIGIT / "-" / "_" / ".")</pre>
           <dl>
             <dt>PUBNUM</dt>
             <dd>
@@ -238,7 +238,7 @@
             The following is an example name from a SMPTE XML namespace:
           </p>
           <pre>
-    http://www.smpte-ra.org/ns/456/2005/foo</pre>
+http://www.smpte-ra.org/ns/456/2005/foo</pre>
           <p>
             One can immediately see that the namespace "foo" is
             defined in a SMPTE Engineering Document numbered "456" and
@@ -253,13 +253,13 @@
             appeared in September of 2005:
           </p>
           <pre>
-    http://www.smpte-ra.org/ns/456-1/200509/foo</pre>
+http://www.smpte-ra.org/ns/456-1/200509/foo</pre>
           <p>
             The following is a name from an XML namespace defined in a
             draft version of the same specification:
           </p>
           <pre>
-    http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo</pre>
+http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo</pre>
           <p>
             The following is not equivalent to the previous name since
             it is missing the string www. (the two URIs can
@@ -267,13 +267,13 @@
             HTTP GET query):
           </p>
           <pre>
-    http://smpte-ra.org/ns/456-1/experimental-20141001/foo</pre>
+http://smpte-ra.org/ns/456-1/experimental-20141001/foo</pre>
           <p>
             The following is not a valid SMPTE XML Namespace since a
             fragment is used:
           </p>
           <pre>
-    http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo#hello</pre>
+http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo#hello</pre>
         </section>
 
         <section id="sec-registration">
@@ -480,90 +480,90 @@
     <section class="annex" id="sec-document-license">
       <h2>XML Document License</h2>
       <pre>
-    Copyright (c), Society of Motion Pictures and Television Engineers. All rights
-    reserved.
+Copyright (c), Society of Motion Pictures and Television Engineers. All rights
+reserved.
 
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted provided that the following conditions are
-    met:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
 
-    1. Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
 
-    2. Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in the
-    documentation and/or other materials provided with the distribution.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
 
-    3. Neither the name of the copyright holder nor the names of its
-    contributors may be used to endorse or promote products derived from
-    this software without specific prior written permission.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
 
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
-    IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
-    TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-    PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-    HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
-    TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-    PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-    LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
     </section>
 
     <section class="annex" id="sec-element-header">
       <h2>XML Element Header</h2>
       <pre>
-    &lt;!--
-    [[TEXT OF XML DOCUMENT LICENSE OF SECTION ANNEX A IN AG-05]]
-    --&gt;
+&lt;!--
+[[TEXT OF XML DOCUMENT LICENSE OF SECTION ANNEX A IN AG-05]]
+--&gt;
+
+&lt;!--
+This document can be retrieved at
+
+   [[[INSERT URI WHERE THE DOCUMENT IS PUBLISHED]]]
     
-    &lt;!--
-    This document can be retrieved at
-        
-       [[[INSERT URI WHERE THE DOCUMENT IS PUBLISHED]]]
-        
-    and is an element of
-        
-       [[[INSERT SMPTE DOCUMENT REFERENCE]]] ,
-        
-    which is available at http://standards.smpte.org.
+and is an element of
 
-        
-    To ensure interoperability, users are encouraged to:
+   [[[INSERT SMPTE DOCUMENT REFERENCE]]] ,
 
-    (a) retain this notice;
-        
-    (b) retrieve the recent versions of this document and its companion
-    defining engineering document. In particular, this document alone might
-    not be sufficient to ensure interoperability;
-        
-    (c) highlight and explain any modification they make to this document; and
-        
-    (d) report issues to [[[INSERT SMPTE CONTACT]]].
-    --></pre>
+which is available at http://standards.smpte.org.
+
+
+To ensure interoperability, users are encouraged to:
+
+(a) retain this notice;
+
+(b) retrieve the recent versions of this document and its companion
+defining engineering document. In particular, this document alone might
+not be sufficient to ensure interoperability;
+
+(c) highlight and explain any modification they make to this document; and
+
+(d) report issues to [[[INSERT SMPTE CONTACT]]].
+--></pre>
     </section>
 
     <section class="annex" id="sec-sample-namespace">
       <h2>Sample XML Namespace Definition Document (informative)</h2>
       <pre>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-     &lt;head&gt;
-      &lt;meta charset="utf-8" /&gt;
-      &lt;title&gt;XML Namespace Definition Document for ST 2071-2&lt;/title&gt;
-     &lt;/head&gt;
-     &lt;body&gt;
-      &lt;div&gt;
-       &lt;p&gt;This namespace is specified in
-       SMPTE ST 2071-2:2016&lt;/p&gt;
-       &lt;p&gt;
-       st2071-2q-2016.xsd is an XML Schema document associated with the namespace.&lt;/p&gt;
-       &lt;p&gt;
-       st2071-2r-2016.wsdl is a WSDL document associated with the namespace.&lt;/p&gt;
-      &lt;/div&gt;
-     &lt;/body&gt;
-    &lt;/html&gt;</pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;XML Namespace Definition Document for ST 2071-2&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;
+   &lt;p&gt;This namespace is specified in
+   SMPTE ST 2071-2:2016&lt;/p&gt;
+   &lt;p&gt;
+   st2071-2q-2016.xsd is an XML Schema document associated with the namespace.&lt;/p&gt;
+   &lt;p&gt;
+   st2071-2r-2016.wsdl is a WSDL document associated with the namespace.&lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</pre>
     </section>
 
     <section id="sec-bibliographic-references">
