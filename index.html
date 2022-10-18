@@ -1,485 +1,372 @@
 <!DOCTYPE html lang="en">
 <html>
   
-  <head itemscope="itemscope" itemtype="http://smpte.org/standards/documents">
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="tooling/smpte.js"></script>
-    <link rel="stylesheet" href="tooling/smpte.css" />
+<head itemscope="itemscope" itemtype="http://smpte.org/standards/documents">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="tooling/smpte.js"></script>
+  <link rel="stylesheet" href="tooling/smpte.css" />
+  <!-- Do not edit above this line -->
+  <!-- Start of editable section in header-->
+  <!-- Update only content attributes in each meta element below as needed -->
     <meta itemprop="pubType" content="AG" />
     <meta itemprop="pubNumber" content="05" />
     <meta itemprop="pubState" content="draft" />
-<!--    <meta itemprop="pubDateTime" content="2018" /> -->
-    <title>XML in Engineering Documents</title>
-  </head>
+    <meta itemprop="pubDateTime" content="20XX-XX-XX" />
+    <!-- update text for title element as needed -->
+  <title>XML in Engineering Documents</title>
+  <!-- End of editable section in header-->
+</head>
 
-  <body>
+<body>
+  
+  <!-- Start of TOC - Do not remove or add anything in this section, generation is automated -->
+  <section id="sec-toc"></section>
+  <!-- End of TOC -->
+
+  <!-- Start of Forward - Do not remove or add anything in this section, generation is automated -->
+  <section id="sec-foreword"></section>
+  <!-- End of Forward -->
+
+  <!-- Start of Scope - Do not remove this section -->
+  <section id="sec-scope">
+    <!-- Add paragraphs in this section as needed for scope -->
+    <p>
+      This Administrative Guideline specifies selected uses of the Extensible Markup Language (XML) in SMPTE Engineering Documents.
+    </p>
     
-    <section id="sec-foreword" class="unnumbered"></section>
-    
-    <section id="sec-toc" class="unnumbered"></section>
-    
-    <section id="sec-scope">
-      <h2>Scope</h2>
+  </section>
+  <!-- End of Scope -->
+
+  <!-- Start of Conformance - Do not remove or add anything in this section, generation is automated -->
+  <section id="sec-conformance"></section>
+  <!-- End of Conformance -->
+
+  <!-- Start of Normative references - Do not remove this section -->
+  <section id="sec-normative-references">
+
+    <!-- Add `li` sub elements as needed in this section as needed for references. If no Normative references, remove the entire `ul` element. Pre text for this section is auto generated based on `ul` present or not. -->
+    <ul>
+      <li>W3C Recommendation, "<cite id="bib-w3c-xmlschema-1">XML Schema Part 1: Structures Second Edition</cite>", 28 October 2004 <a>http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/</a></li>
+      <li>W3C Recommendation, "<cite id="bib-w3c-xmlschema-2">XML Schema Part 2: Datatypes Second Edition</cite>", 28 October 2004 <a>http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/</a></li>
+      <li>W3C Recommendation, "<cite id="bib-w3c-rec-xml-20081126">Extensible Markup Language (XML) 1.0 (Fifth Edition)</cite>", 26 November 2008 <a>http://www.w3.org/TR/2008/REC-xml-20081126/</a></li>
+      <li>W3C Recommendation, "<cite id="bib-w3c-rec-xml-names-20091208">Namespaces in XML 1.0 (Third Edition)</cite>", 8 December 2009 <a>http://www.w3.org/TR/2009/REC-xml-names-20091208/</a></li>
+      <li>W3C Recommendation, "<cite id="bib-w3c-rec-html">HTML 5.2</cite>", 14 December 2017, <a>https://www.w3.org/TR/html5/</a></li>
+      <li><cite id="bib-ietf-rfc-3986">IETF RFC 3986</cite>, "Uniform Resource Identifiers (URI): Generic Syntax", T. Berners-Lee, et al., January 2005 <a>http://www.ietf.org/rfc/rfc3986.txt</a></li>
+    </ul>
+  </section>
+  <!-- End of Normative references -->
+
+  <!-- Start of Terms and definitions - Do not remove this section -->
+  <section id="sec-terms-and-definitions">
+
+    <!-- Use the `ul` element to list external documents where Terms are defined (use same logic as referenced docs in the body of the document as example shows). Add `dt/dd` sub element pairs as needed for Terms to be defined internally in this document. Remove either the `ul` if no external Terms, or `dl` if no internally defined Terms. If no Terms needed to be defined at all, remove the both `ul` and `dl` elements. Pre text for this section is auto generated based on what elements are present. -->
+
+  </section>
+  <!-- End of Terms and definitions -->
+
+  <!-- Start of editable area. Add sections as needed, following the examples below. `id` attribue is required for each section (and subsection) for linking into TOC. Headers are required for labeling each section. Use `h2` element for top level, and `h3`, `h4`, etc. for nested sub sections as needed. For Annexes, add `class="annex"` to the top level section element, as example shows. Numbering is auto generated, including nesting. --> 
+
+
+
+
+  <section id="sec-general">
+    <h2>General</h2>
+
+    <section id="sec-license">
+      <h3>License</h3>
       <p>
-        This Administrative Guideline specifies selected uses of the
-        Extensible Markup Language (XML) in SMPTE Engineering Documents.
+        Any document that (a) is defined by an Engineering Document and (b) conforms to <a href="#bib-w3c-rec-xml-20081126"></a>, whether within the prose or as an Additional Element, shall be licensed according to <a href="#sec-document-license"></a>.
       </p>
-      
+    </section>
+
+    <section id="sec-header">
+      <h3>Header</h3>
+      <p>
+        Additional Elements of Engineering Documents that conform to <a href="#bib-w3c-rec-xml-20081126"></a> should include the text of <a href="#sec-element-header"></a>, at the head of document and with the text between triple brackets replaced as specified.
+      </p>
+    </section>
+  </section>
+
+  <section id="sec-namespaces">
+    <h2>XML Namespaces</h2>
+
+    <section id="sec-namespace-overview">
+      <h3>Overview (informative)</h3>
+      <p>
+        XML namespaces, specified in <a href="#bib-w3c-rec-xml-names-20091208"></a>, are used to avoid collisions between independent XML vocabularies (attributes and elements), and provide an unambiguous and human-readable link to the specifications that define these vocabularies. Each XML namespace has its unique name, which is a URI that conforms to <a href="#bib-ietf-rfc-3986"></a>.
+      </p>
+    </section>
+
+    <section id="sec-elements-attributes">
+      <h3>XML Elements and Attributes</h3>
+      <p>
+        Each XML element and attribute defined by an Engineering Document should be qualified by an XML namespace name, as defined in <a href="#bib-w3c-rec-xml-names-20091208"></a>.
+      </p>
+      <p class="note">
+        NOTE: It is customary for related elements and attributes to share a common XML namespace.
+      </p>
+    </section>
+
+    <section id="sec-defining-namespaces">
+      <h3>Defining XML Namespaces</h3>
+      <p>
+        In most circumstances, an Engineering Document that defines XML elements and attributes will also define one or more XML namespaces, since it is rarely possible to add items to an XML namespace defined elsewhere. An Engineering document may define any number of XML namespaces, and all such XML namespaces shall be SMPTE XML namespaces as specified in <a href="#sec-smpte-namespaces"></a>, unless otherwise permitted by <a href="#sec-legacy-compatibility"></a>.
+      </p>
     </section>
     
-    <section id="sec-conformance"></section>
-    
-    <section id="sec-normative-references">
-      <ul>
-        <li>
-          W3C Recommendation,
-          "<cite id="bib-w3c-xmlschema-1">XML Schema Part 1: Structures Second Edition</cite>",
-          28 October 2004,
-          <a>http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/</a>
-        </li>
-        <li>
-          W3C Recommendation,
-          "<cite id="bib-w3c-xmlschema-2">XML Schema Part 2: Datatypes Second Edition</cite>",
-          28 October 2004,
-          <a>http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/</a>
-        </li>
-        <li>
-          W3C Recommendation,
-          "<cite id="bib-w3c-rec-xml-20081126">Extensible Markup Language (XML) 1.0 (Fifth Edition)</cite>",
-          26 November 2008,
-          <a>http://www.w3.org/TR/2008/REC-xml-20081126/</a>
-        </li>
-        <li>
-          W3C Recommendation,
-          "<cite id="bib-w3c-rec-xml-names-20091208">Namespaces in XML 1.0 (Third Edition)</cite>",
-          8 December 2009,
-          <a>http://www.w3.org/TR/2009/REC-xml-names-20091208/</a>
-        </li>
-        <li>
-          W3C Recommendation,
-          "<cite id="bib-w3c-rec-html">HTML 5.2</cite>",
-          14 December 2017,
-          <a>https://www.w3.org/TR/html5/</a>
-        </li>
-        <li>
-          <cite id="bib-ietf-rfc-3986">IETF RFC 3986</cite>,
-          "Uniform Resource Identifiers (URI): Generic Syntax", T. Berners-Lee, et al.,
-          January 2005.
-          <a>http://www.ietf.org/rfc/rfc3986.txt</a>
-        </li>
-      </ul>
-    </section>
+    <section id="sec-smpte-namespaces">
+      <h3>SMPTE XML Namespaces</h3>
 
-    <section id="sec-general">
-      <h2>General</h2>
-
-      <section id="sec-license">
-        <h3>License</h3>
+      <section id="sec-name-syntax">
+        <h4>Name Syntax</h4>
         <p>
-          Any document that (a) is defined by an Engineering Document
-          and (b) conforms to Extensible Markup Language (XML) 1.0,
-          whether within the prose or as an Additional Element, shall
-          be licensed according to <a href="#sec-document-license"></a>.
+          The name of a SMPTE XML Namespace shall conform to the NS syntax below specified using RFC 7405:
         </p>
-      </section>
 
-      <section id="sec-header">
-        <h3>Header</h3>
-        <p>
-          Additional Elements of Engineering Documents that conform to
-          Extensible Markup Language (XML) 1.0 should include the text
-          of <a href="#sec-element-header"></a>, at the head of document and with the text
-          between triple brackets replaced as specified.
-        </p>
-      </section>
-    </section>
-
-    <section id="sec-namespaces">
-      <h2>XML Namespaces</h2>
-
-      <section id="sec-namespace-overview">
-        <h3>Overview (informative)</h3>
-        <p>
-          XML namespaces, specified in W3C Namespaces in XML 1.0, are
-          used to avoid collisions between independent XML
-          vocabularies (attributes and elements), and provide an
-          unambiguous and human-readable link to the specifications
-          that define these vocabularies. Each XML namespace has its
-          unique name, which is a URI that conforms to
-          <a href="#bib-ietf-rfc-3986"></a>.
-        </p>
-      </section>
-
-      <section id="sec-elements-attributes">
-        <h3>XML Elements and Attributes</h3>
-        <p>
-          Each XML element and attribute defined by an Engineering
-          Document should be qualified by an XML namespace name, as
-          defined in W3C Namespaces in XML 1.0.
-        </p>
-        <p class="note">
-          NOTE: It is customary for related elements and attributes to share a common XML namespace.
-        </p>
-      </section>
-
-      <section id="sec-defining-namespaces">
-        <h3>Defining XML Namespaces</h3>
-        <p>
-          In most circumstances, an Engineering Document that defines
-          XML elements and attributes will also define one or more XML
-          namespaces, since it is rarely possible to add items to an
-          XML namespace defined elsewhere.  An Engineering document
-          may define any number of XML namespaces, and all such XML
-          namespaces shall be SMPTE XML namespaces as specified in
-          Section
-          <a href="#sec-smpte-namespaces"></a>5.3, unless otherwise
-          permitted by Section <a href="#sec-legacy-compatibility"></a>.
-        </p>
-      </section>
-      
-      <section id="sec-smpte-namespaces">
-        <h3>SMPTE XML Namespaces</h3>
-
-        <section id="sec-name-syntax">
-          <h4>Name Syntax</h4>
-          <p>
-            The name of a SMPTE XML Namespace shall conform to the NS syntax below specified using RFC 7405:
-          </p>
-          <pre>
+<pre>
 NS = %s"<a>http://www.smpte-ra.org/ns/</a>" PUBNUM "/" REVISION [ "/" SHORTNAME]
 SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
 PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
 REVISION = STABLEREV / EXPREV
 STABLEREV = 4(DIGIT) [2(DIGIT)]
-EXPREV = %s"experimental-" 1*(ALPHA / DIGIT / "-" / "_" / ".")</pre>
-          <dl>
-            <dt>PUBNUM</dt>
-            <dd>
-              shall represent the official publication number of the
-              Engineering Document, without leading zeroes and
-              including a part number, if any, separated by a hyphen,
-              e.g. 456-1.
-            </dd>
-            <dt>SHORTNAME</dt>
-            <dd>
-              is used when the Engineering Document defines more than
-              one XML namespace. It may provide a human meaningful
-              designation of the namespace, but shall not to include
-              any version information.
-            </dd>
-          </dl>
-          <p>
-            The fragment identifier component shall not be present.
-          </p>
-          <p class="note">
-            While fragment identifier components are not used in
-            namespace URIs, they can be used to generate identifiers
-            unique to the specification, e.g. as values in
-            enumerations.
-          </p>
-          <p>
-            A stable SMPTE XML namespace is a SMPTE XML namespace
-            whose name is such that REVISION:
-          </p>
-          <ul>
-            <li>
-              conforms to STABLEREV, which consists of a year
-              encoded as 4 decimal digits and, optionally, a month
-              encoded as 2 decimal digits in the range 1-12; and
-            </li>
-            <li>
-              represent the date that the XML namespace URI first
-              appeared in the Engineering Document.
-            </li>
-          </ul>
-          <p class="note">
-            The REVISON component of a stable SMPTE XML namespace does
-            not necessarily correspond to the publication date of its
-            defining Engineering Document. For instance, the defining
-            Engineering Document can be revised in such a way that the
-            contents of the XML Namespace remain unchanged. The XML
-            Namespace Definition Document, specified in Section 5.6,
-            contains an unambiguous link to the published Engineering
-            Document.
-          </p>
-          <p>
-            An experimental SMPTE XML namespace is a SMPTE XML
-            namespace whose name is such that REVISION conforms to
-            EXPREV.
-          </p>
-          <p>
-            Such experimental SMPTE XML namespace are available for
-            use in draft Engineering Documents to readily identify XML
-            namespaces that are hence susceptible to change prior to
-            publication.
-          </p>
-          <p>
-            Until an Engineering Document is presented to Draft
-            Publication ballot, any SMPTE XML namespace defined
-            therein may be an experimental SMPTE XML namespace, unless
-            the SMPTE XML namespace was previously defined in a
-            published Engineering Document; thereafter, any SMPTE XML
-            namespace defined in the Engineering document shall be a
-            stable SMPTE XML namespace.
-          </p>
-          <p class="note">
-            No changes to XML namespace names are necessary following
-            a Draft Publication ballot since XML namespace names are
-            constructed independently of the publication date of the
-            Engineering Document.
-          </p>
-        </section>
-        
-        <section id="sec-examples">
-          <h4>Examples (informative)</h4>
-          <p>
-            The following is an example name from a SMPTE XML namespace:
-          </p>
-          <pre>
-http://www.smpte-ra.org/ns/456/2005/foo</pre>
-          <p>
-            One can immediately see that the namespace "foo" is
-            defined in a SMPTE Engineering Document numbered "456" and
-            initially appeared in the year "2005". One would assume
-            that a "foo" was a well-known artifact to SMPTE members,
-            at least for those that have read Engineering Document
-            number "456".
-          </p>
-          <p>
-            The following is an example XML namespace name defined in
-            a document with a part designation and that originally
-            appeared in September of 2005:
-          </p>
-          <pre>
-http://www.smpte-ra.org/ns/456-1/200509/foo</pre>
-          <p>
-            The following is a name from an XML namespace defined in a
-            draft version of the same specification:
-          </p>
-          <pre>
-http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo</pre>
-          <p>
-            The following is not equivalent to the previous name since
-            it is missing the string www. (the two URIs can
-            nevertheless resolve to the same resource when used in an
-            HTTP GET query):
-          </p>
-          <pre>
-http://smpte-ra.org/ns/456-1/experimental-20141001/foo</pre>
-          <p>
-            The following is not a valid SMPTE XML Namespace since a
-            fragment is used:
-          </p>
-          <pre>
-http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo#hello</pre>
-        </section>
+EXPREV = %s"experimental-" 1*(ALPHA / DIGIT / "-" / "_" / ".")
+</pre>
 
-        <section id="sec-registration">
-          <h4>Registration (informative)</h4>
-          <p>
-            The SMPTE XML namespace syntax ensures uniqueness across
-            Engineering Documents, and thus no specific registration
-            steps are required.
-          </p>
-        </section>
-      </section>
+        <dl>
+          <dt>PUBNUM</dt>
+          <dd>shall represent the official publication number of the Engineering Document, without leading zeroes and including a part number, if any, separated by a hyphen, e.g. <code>456-1</code>.</dd>
+          <dt>SHORTNAME</dt>
+          <dd>is used when the Engineering Document defines more than one XML namespace. It may provide a human meaningful designation of the namespace, but shall not to include any version information.</dd>
+        </dl>
 
-      <section id="sec-change-policy">
-        <h3>Change Policy</h3>
         <p>
-          An Engineering Document that defines an XML namespace should
-          specify whether the XML namespace is mutable, i.e. whether
-          changes to the set of names defined by that XML namespace
-          are allowed without also changing the name of the XML
-          namespace.
+          The fragment identifier component shall not be present.
         </p>
-      </section>
-
-      <section id="sec-namespace-document">
-        <h3>XML Namespace Definition Document</h3>
-        <p>
-          For each XML namespace defined in an Engineering Document,
-          an XML Namespace Definition Document shall be publicly
-          retrievable at the XML Namespace URI.
+        <p class="note">
+          While fragment identifier components are not used in namespace URIs, they can be used to generate identifiers unique to the specification, e.g. as values in enumerations.
         </p>
         <p>
-          Each XML Namespace Definition Document shall be
-          human-readable and include:
+          A stable SMPTE XML namespace is a SMPTE XML namespace whose name is such that <code>REVISION</code>:
         </p>
         <ul>
           <li>
-            a reference to the most recent revision of the defining
-            Engineering Document
+            conforms to <code>STABLEREV</code>, which consists of a year encoded as 4 decimal digits and, optionally, a month encoded as 2 decimal digits in the range 1-12; and
           </li>
           <li>
-            download links, if available, to any Additional Elements
-            making use of the XML Namespace, e.g. XML Schema, WSDL,
-            etc..
+            represent the date that the XML namespace URI first appeared in the Engineering Document.
           </li>
         </ul>
-        <p>
-          The XML Namespace Definition Document should conform to
-          HTML, as specified in <a href="#bib-w3c-rec-html"></a>.
+        <p class="note">
+          The <code>REVISON</code> component of a stable SMPTE XML namespace does not necessarily correspond to the publication date of its defining Engineering Document. For instance, the defining Engineering Document can be revised in such a way that the contents of the XML Namespace remain unchanged. The XML Namespace Definition Document, specified in <a href="#sec-namespace-document"></a>, contains an unambiguous link to the published Engineering Document.
         </p>
         <p>
-          <a href="#sec-sample-namespace"></a> lists a sample XML Namespace
-          Definition Document.
+          An experimental SMPTE XML namespace is a SMPTE XML namespace whose name is such that <code>REVISION</code> conforms to <code>EXPREV</code>.
+        </p>
+        <p>
+          Such experimental SMPTE XML namespace are available for use in draft Engineering Documents to readily identify XML namespaces that are hence susceptible to change prior to publication.
+        </p>
+        <p>
+          Until an Engineering Document is presented to Draft Publication ballot, any SMPTE XML namespace defined therein may be an experimental SMPTE XML namespace, unless the SMPTE XML namespace was previously defined in a published Engineering Document; thereafter, any SMPTE XML namespace defined in the Engineering document shall be a stable SMPTE XML namespace.
+        </p>
+        <p class="note">
+          No changes to XML namespace names are necessary following a Draft Publication ballot since XML namespace names are constructed independently of the publication date of the Engineering Document.
         </p>
       </section>
-
-      <section id="sec-legacy-compatibility">
-        <h3>Compatibility with Legacy XML Namespace URI Syntax</h3>
+      
+      <section id="sec-examples">
+        <h4>Examples (informative)</h4>
         <p>
-          Earlier versions of this Administrative Guideline specified
-          a substantially different syntax for XML Namespace URIs. For
-          instance, the string "schemas" was used instead of "ns" and
-          a number sign ("#") character could terminate the URI, with
-          an otherwise empty fragment identifier component. This
-          syntax is deprecated.
+          The following is an example name from a SMPTE XML namespace:
+        </p>
+
+<pre>
+http://www.smpte-ra.org/ns/456/2005/foo
+</pre>
+
+        <p>
+          One can immediately see that the namespace "foo" is defined in a SMPTE Engineering Document numbered "456" and initially appeared in the year "2005". One would assume that a "foo" was a well-known artifact to SMPTE members, at least for those that have read Engineering Document number "456".
         </p>
         <p>
-          Published Engineering Documents that conform to prior
-          versions of this specification, as well as their revisions
-          and amendments, may continue to do so.
+          The following is an example XML namespace name defined in a document with a part designation and that originally appeared in September of 2005:
+        </p>
+
+<pre>
+http://www.smpte-ra.org/ns/456-1/200509/foo
+</pre>
+
+        <p>
+          The following is a name from an XML namespace defined in a draft version of the same specification:
+        </p>
+
+<pre>
+http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo
+</pre>
+
+        <p>
+          The following is not equivalent to the previous name since it is missing the string www. (the two URIs can nevertheless resolve to the same resource when used in an HTTP GET query):
+        </p>
+
+<pre>
+http://smpte-ra.org/ns/456-1/experimental-20141001/foo
+</pre>
+
+        <p>
+          The following is not a valid SMPTE XML Namespace since a fragment is used:
+        </p>
+
+<pre>
+http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo#hello
+</pre>
+
+      </section>
+
+      <section id="sec-registration">
+        <h4>Registration (informative)</h4>
+        <p>
+          The SMPTE XML namespace syntax ensures uniqueness across Engineering Documents, and thus no specific registration steps are required.
         </p>
       </section>
     </section>
 
-    <section id="sec-schema">
-      <h2>XML Schema</h2>
-
-      <section id="sec-schema-introduction">
-        <h3>Introduction (informative)</h3>
-        <p>
-          Using a formal language like XML Schema, specified in
-          <a href="#bib-w3c-xmlschema-1"></a>, to describe conformance
-          requirements can avoid some of the ambiguity inherent with
-          using English prose alone, while allowing the use of
-          existing commercial tools to facilitate testing and
-          validation.
-        </p>
-        <p class="note">
-          The following provisions are derived in part from Good
-          Practice 11 at <a href="#bib-w3c-spec"></a>
-          and <a href="#bib-ietf-guide"></a>.
-        </p>
-      </section>
-
-      <section id="sec-using-schema>">
-        <h3>Using XML Schema</h3>
-        <p>
-          XML Schema, as specified in
-          <a href="#bib-w3c-xmlschema-1"></a>, may be used normatively
-          or informatively in an Engineering Document, either by
-          inclusion or by reference.
-        </p>
-      </section>
-
-      <section id="sec-precdence">
-        <h3>Precedence</h3>
-        <p>
-          Engineering Documents may specify a policy in case of a
-          conflict between prose and XML Schema. In absence of such
-          policy, the precedence rules specified in the Conformance
-          section of <a href="#bib-ag-04-1"></a> applies.
-        </p>
-      </section>
-
-      <section id="sec-discrepancies">
-        <h3>Avoiding Discrepancies</h3>
-        <p>
-          To help avoid discrepancies between the English prose and
-          the XML Schema, prose sections should be bound to the
-          related portion of the XML Schema, so that one cannot be
-          modified without the other.
-        </p>
-        <p class="note">
-          One method to bind prose to XML Schema is to include XML
-          Schema definitions inline within the prose. Another method
-          is for the prose to refer to XML Schema definitions
-          specified in appendices or Additional Elements.
-        </p>
-        <p>
-          Any Additional Element that conforms to XML Schema, and
-          duplicates normative XML Schema definitions specified in the
-          Prose Element, shall be normative.
-        </p>
-        <p class="note">
-          Informative XML Schema definitions can be used as examples,
-          e.g. to demonstrate how to define an extension to another
-          XML Schemas through the <code>&lt;xs:any&gt;</code> mechanism.
-        </p>
-      </section>
-
-      <section id="sec-language-version">
-        <h3>Language Version</h3>
-        <p>
-          Whenever an XML Schema is provided and any portion of it is
-          normative, the Engineering Document shall provide a
-          normative reference to the XML Schema specification it
-          conforms to.
-        </p>
-        <p>
-          It is also recommended that a reference (although it may be
-          bibliographic) be made to the XML language specification
-          itself.
-        </p>
-      </section>
-
-      <section id="sec-external-definitions">
-        <h3>External Definitions</h3>
-        <p>
-          The defining document of any externally-defined XML
-          namespaces shall be included as a normative reference if the
-          XML schema is normative.
-        </p>
-      </section>
-
-      <section id="sec-formed-definitions">
-        <h3>Well-Formed Definitions</h3>
-        <p>
-          All XML Schema defined in a SMPTE Engineering Document shall
-          be well-formed and valid with respect to the XML Schema
-          language.
-        </p>
-      </section>
-
-      <section id="sec-example-instances">
-        <h3>Example Instances</h3>
-        <p>
-          All example instance documents shall be informative.
-        </p>
-        <p>
-          All example instance documents shall be well-formed. If an
-          example instance document is document, then it shall be
-          valid with respect to the XML Schema defined.
-        </p>
-        <p>
-          Graphical representations of the schema structure should be
-          included when it adds clarity.
-        </p>
-      </section>
-
-      <section id="sec-publication">
-        <h3>Publication</h3>
-        <p>
-          All Additional Elements of Engineering Documents conforming
-          to XML Schema shall be publically retrievable at an HTTP URI
-          chosen by the Director of Engineering.
-        </p>
-        <p class="note">
-          The same URI is also listed in the Namespace Definition
-          Document per Section 5.5 if the XML Schema Document
-          specifies a target namespace.
-        </p>
-      </section>
+    <section id="sec-change-policy">
+      <h3>Change Policy</h3>
+      <p>
+        An Engineering Document that defines an XML namespace should specify whether the XML namespace is mutable, i.e. whether changes to the set of names defined by that XML namespace are allowed without also changing the name of the XML namespace.
+      </p>
     </section>
-    
-    <section class="annex" id="sec-document-license">
-      <h2>XML Document License</h2>
-      <pre>
+
+    <section id="sec-namespace-document">
+      <h3>XML Namespace Definition Document</h3>
+      <p>
+        For each XML namespace defined in an Engineering Document, an XML Namespace Definition Document shall be publicly retrievable at the XML Namespace URI.
+      </p>
+      <p>
+        Each XML Namespace Definition Document shall be human-readable and include:
+      </p>
+      <ul>
+        <li>
+          a reference to the most recent revision of the defining Engineering Document
+        </li>
+        <li>
+          download links, if available, to any Additional Elements making use of the XML Namespace, e.g. XML Schema, WSDL, etc..
+        </li>
+      </ul>
+      <p>
+        The XML Namespace Definition Document should conform to HTML, as specified in <a href="#bib-w3c-rec-html"></a>.
+      </p>
+      <p>
+        <a href="#sec-sample-namespace"></a> lists a sample XML Namespace Definition Document.
+      </p>
+    </section>
+
+    <section id="sec-legacy-compatibility">
+      <h3>Compatibility with Legacy XML Namespace URI Syntax</h3>
+      <p>
+        Earlier versions of this Administrative Guideline specified a substantially different syntax for XML Namespace URIs. For instance, the string "schemas" was used instead of "ns" and a number sign ("#") character could terminate the URI, with an otherwise empty fragment identifier component. This syntax is deprecated.
+      </p>
+      <p>
+        Published Engineering Documents that conform to prior versions of this specification, as well as their revisions and amendments, may continue to do so.
+      </p>
+    </section>
+  </section>
+
+  <section id="sec-schema">
+    <h2>XML Schema</h2>
+
+    <section id="sec-schema-introduction">
+      <h3>Introduction (informative)</h3>
+      <p>
+        Using a formal language like XML Schema, specified in <a href="#bib-w3c-xmlschema-1"></a>, to describe conformance requirements can avoid some of the ambiguity inherent with using English prose alone, while allowing the use of existing commercial tools to facilitate testing and validation.
+      </p>
+      <p class="note">
+        The following provisions are derived in part from Good Practice 11 at <a href="#bib-w3c-spec"></a> and <a href="#bib-ietf-guide"></a>.
+      </p>
+    </section>
+
+    <section id="sec-using-schema>">
+      <h3>Using XML Schema</h3>
+      <p>
+        XML Schema, as specified in <a href="#bib-w3c-xmlschema-1"></a>, may be used normatively or informatively in an Engineering Document, either by inclusion or by reference.
+      </p>
+    </section>
+
+    <section id="sec-precdence">
+      <h3>Precedence</h3>
+      <p>
+        Engineering Documents may specify a policy in case of a conflict between prose and XML Schema. In absence of such policy, the precedence rules specified in the Conformance section of <a href="#bib-ag-04-1"></a> applies.
+      </p>
+    </section>
+
+    <section id="sec-discrepancies">
+      <h3>Avoiding Discrepancies</h3>
+      <p>
+        To help avoid discrepancies between the English prose and the XML Schema, prose sections should be bound to the related portion of the XML Schema, so that one cannot be modified without the other.
+      </p>
+      <p class="note">
+        One method to bind prose to XML Schema is to include XML Schema definitions inline within the prose. Another method is for the prose to refer to XML Schema definitions specified in appendices or Additional Elements.
+      </p>
+      <p>
+        Any Additional Element that conforms to XML Schema, and duplicates normative XML Schema definitions specified in the Prose Element, shall be normative.
+      </p>
+      <p class="note">
+        Informative XML Schema definitions can be used as examples, e.g. to demonstrate how to define an extension to another XML Schemas through the <code>&lt;xs:any&gt;</code> mechanism.
+      </p>
+    </section>
+
+    <section id="sec-language-version">
+      <h3>Language Version</h3>
+      <p>
+        Whenever an XML Schema is provided and any portion of it is normative, the Engineering Document shall provide a normative reference to the XML Schema specification it conforms to.
+      </p>
+      <p>
+        It is also recommended that a reference (although it may be bibliographic) be made to the XML language specification itself.
+      </p>
+    </section>
+
+    <section id="sec-external-definitions">
+      <h3>External Definitions</h3>
+      <p>
+        The defining document of any externally-defined XML namespaces shall be included as a normative reference if the XML schema is normative.
+      </p>
+    </section>
+
+    <section id="sec-formed-definitions">
+      <h3>Well-Formed Definitions</h3>
+      <p>
+        All XML Schema defined in a SMPTE Engineering Document shall be well-formed and valid with respect to the XML Schema language.
+      </p>
+    </section>
+
+    <section id="sec-example-instances">
+      <h3>Example Instances</h3>
+      <p>
+        All example instance documents shall be informative.
+      </p>
+      <p>
+        All example instance documents shall be well-formed. If an example instance document is document, then it shall be valid with respect to the XML Schema defined.
+      </p>
+      <p>
+        Graphical representations of the schema structure should be included when it adds clarity.
+      </p>
+    </section>
+
+    <section id="sec-publication">
+      <h3>Publication</h3>
+      <p>
+        All Additional Elements of Engineering Documents conforming to XML Schema shall be publically retrievable at an HTTP URI chosen by the Director of Engineering.
+      </p>
+      <p class="note">
+        The same URI is also listed in the Namespace Definition Document per <a href="#sec-namespace-document"></a> if the XML Schema Document specifies a target namespace.
+      </p>
+    </section>
+  </section>
+  
+  <section class="annex" id="sec-document-license">
+    <h2>XML Document License</h2>
+
+<pre>
 Copyright (c), Society of Motion Pictures and Television Engineers. All rights
 reserved.
 
@@ -508,24 +395,27 @@ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
 PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
-    </section>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
 
-    <section class="annex" id="sec-element-header">
-      <h2>XML Element Header</h2>
-      <pre>
+  </section>
+
+  <section class="annex" id="sec-element-header">
+    <h2>XML Element Header</h2>
+
+<pre>
 &lt;!--
-[[TEXT OF XML DOCUMENT LICENSE OF SECTION ANNEX A IN AG-05]]
+[[TEXT OF XML DOCUMENT LICENSE OF SECTION <a href="#sec-document-license"></a> IN AG-05]]
 --&gt;
 
 &lt;!--
 This document can be retrieved at
 
-   [[[INSERT URI WHERE THE DOCUMENT IS PUBLISHED]]]
-    
+ [[[INSERT URI WHERE THE DOCUMENT IS PUBLISHED]]]
+  
 and is an element of
 
-   [[[INSERT SMPTE DOCUMENT REFERENCE]]] ,
+ [[[INSERT SMPTE DOCUMENT REFERENCE]]] ,
 
 which is available at http://standards.smpte.org.
 
@@ -541,58 +431,48 @@ not be sufficient to ensure interoperability;
 (c) highlight and explain any modification they make to this document; and
 
 (d) report issues to [[[INSERT SMPTE CONTACT]]].
---></pre>
-    </section>
+-->
+</pre>
 
-    <section class="annex" id="sec-sample-namespace">
-      <h2>Sample XML Namespace Definition Document (informative)</h2>
-      <pre>
+  </section>
+
+  <section class="annex" id="sec-sample-namespace">
+    <h2>Sample XML Namespace Definition Document (informative)</h2>
+    
+<pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
- &lt;head&gt;
-  &lt;meta charset="utf-8" /&gt;
-  &lt;title&gt;XML Namespace Definition Document for ST 2071-2&lt;/title&gt;
- &lt;/head&gt;
- &lt;body&gt;
-  &lt;div&gt;
-   &lt;p&gt;This namespace is specified in
-   SMPTE ST 2071-2:2016&lt;/p&gt;
-   &lt;p&gt;
-   st2071-2q-2016.xsd is an XML Schema document associated with the namespace.&lt;/p&gt;
-   &lt;p&gt;
-   &lt; st2071-2r-2016.wsdl is a WSDL document associated with the namespace.&lt;/p&gt;
-  &lt;/div&gt;
- &lt;/body&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;title&gt;XML Namespace Definition Document for ST 2071-2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+ &lt;p&gt;This namespace is specified in
+ SMPTE ST 2071-2:2016&lt;/p&gt;
+ &lt;p&gt;
+ st2071-2q-2016.xsd is an XML Schema document associated with the namespace.&lt;/p&gt;
+ &lt;p&gt;
+ &lt; st2071-2r-2016.wsdl is a WSDL document associated with the namespace.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
 &lt;/html&gt;</pre>
-    </section>
+</section>
 
-    <section id="sec-bibliographic-references">
-      <ul>
-        <li>
-          <cite id="bib-w3c-spec">QA Framework: Specification Guidelines</cite>,
-          W3C Recommendation,
-          17 August 2005.
-          <a>http://www.w3.org/TR/2005/REC-qaframe-spec-20050817/</a>
-        </li>
-        <li>
-          IETF
-          <cite id="bib-ietf-guide">Guidelines for the use of formal languages in IETF specifications</cite>.
-          <a>http://www.ietf.org/IESG/STATEMENTS/pseudo-code-in-specs.txt</a>
-        </li>
-        <li>
-          <cite id="bib-ag-02">SMPTE AG02:2015</cite>
-          Engineering Documents
-        </li>
-        <li>
-          <cite id="bib-ag-04-1">SMPTE AG04-1:2015</cite>
-          SMPTE ST-RP-Template
-        </li>
-        <li>
-          <cite id="bib-ag-04-2">SMPTE AG04-2:2015</cite>
-          SMPTE EG-Template
-        </li>
-      </ul>
-    </section>
-    
-  </body>
+  <!-- End of editable sections -->
+
+  <!-- Start of Bibliography - ONLY use if infomative references are present - If no Bibliographic references, remove the entire section. -->
+  <section id="sec-bibliography">
+    <ul>
+      <li><cite id="bib-w3c-spec">QA Framework: Specification Guidelines</cite>, W3C Recommendation, 17 August 2005 <a>http://www.w3.org/TR/2005/REC-qaframe-spec-20050817/</a></li>
+      <li>IETF <cite id="bib-ietf-guide">Guidelines for the use of formal languages in IETF specifications</cite> <a>http://www.ietf.org/IESG/STATEMENTS/pseudo-code-in-specs.txt</a></li>
+      <li><cite id="bib-ag-02">SMPTE AG-02:2015</cite> Engineering Documents</li>
+      <li><cite id="bib-ag-04-1">SMPTE AG-04-1:2015</cite> SMPTE ST-RP-Template</li>
+      <li><cite id="bib-ag-04-2">SMPTE AG-04-2:2015</cite> SMPTE EG-Template</li>
+    </ul>
+  </section>
+  <!-- End of Bibliography -->
+
+<!-- Do not edit below this line -->
+</body>
 </html>
