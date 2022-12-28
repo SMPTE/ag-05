@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "puppeteer": "^19.4.1",
-    "smpte-html-pub-tooling": "file:tooling"
-  }
-}
