@@ -6,11 +6,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="../tooling/smpte.js"></script>
-  <link rel="stylesheet" href="../tooling/css/smpte.css" />
   <meta itemprop="pubType" content="AG" />
   <meta itemprop="pubNumber" content="05" />
-  <meta itemprop="pubState" content="draft" />
-  <meta itemprop="pubDateTime" content="2022-12-20" />
+  <meta itemprop="pubState" content="pub" />
+  <meta itemprop="pubDateTime" content="2023-04-09" />
   <title>XML in Engineering Documents</title>
 </head>
 
@@ -68,7 +67,7 @@
         Each XML element and attribute defined by an Engineering Document should be qualified by an XML namespace name, as defined in <a href="#bib-w3c-rec-xml-names-20091208"></a>.
       </p>
       <p class="note">
-        NOTE: It is customary for related elements and attributes to share a common XML namespace.
+        It is customary for related elements and attributes to share a common XML namespace.
       </p>
     </section>
 
@@ -244,7 +243,7 @@ http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo#hello
         Using a formal language like XML Schema, specified in <a href="#bib-w3c-xmlschema-1"></a>, to describe conformance requirements can avoid some of the ambiguity inherent with using English prose alone, while allowing the use of existing commercial tools to facilitate testing and validation.
       </p>
       <p class="note">
-        The following provisions are derived in part from Good Practice 11 at <a href="#bib-w3c-spec"></a> and <a href="#bib-ietf-guide"></a>.
+        The following provisions are derived in part from Good Practice 11 at <a href="#bib-html"></a> and <a href="#bib-ietf-guide"></a>.
       </p>
     </section>
 
@@ -368,7 +367,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <pre>
 &lt;!--
-[[TEXT OF XML DOCUMENT LICENSE OF SECTION <a href="#sec-document-license"></a> IN AG-05]]
+[[TEXT OF XML DOCUMENT LICENSE OF <a href="#sec-document-license"></a> IN AG-05]]
 --&gt;
 
 &lt;!--
@@ -424,8 +423,10 @@ not be sufficient to ensure interoperability;
 
   <section id="sec-bibliography">
     <ul>
-      <li><cite id="bib-w3c-spec">QA Framework: Specification Guidelines</cite>, W3C Recommendation, 17 August 2005 <a>http://www.w3.org/TR/2005/REC-qaframe-spec-20050817/</a></li>
-      <li>IETF <cite id="bib-ietf-guide">Guidelines for the use of formal languages in IETF specifications</cite> <a>http://www.ietf.org/IESG/STATEMENTS/pseudo-code-in-specs.txt</a></li>
+      <li>WHATWG, "<cite id="bib-html">HTML Living Standard</cite>"
+        <a>https://html.spec.whatwg.org/</a></li>
+      <li>IETF <cite id="bib-ietf-guide">Guidelines for the Use of Formal Languages in IETF Specifications</cite> 
+        <a>https://www.ietf.org/about/groups/iesg/statements/formal-languages-use/</a></li>
       <li><cite id="bib-smpte-ag-04-st">SMPTE AG-04-ST</cite>, Standards Template
         <a>https://www.smpte.org/about/policies-and-governance</a></li>
       <li><cite id="bib-smpte-ag-04-eg">SMPTE AG-04-EG</cite>, Engineering Guideline Template
