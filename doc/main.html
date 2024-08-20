@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="../tooling/smpte.js"></script>
+  <script type="module" src="../tooling/smpte.js"></script>
   <meta itemprop="pubType" content="AG" />
   <meta itemprop="pubNumber" content="05" />
   <meta itemprop="pubState" content="draft" />
@@ -30,6 +30,7 @@
       <li><cite id="bib-ietf-rfc-3986">IETF RFC 3986</cite>, "Uniform Resource Identifiers (URI): Generic Syntax", T. Berners-Lee, et al., January 2005 <a>http://www.ietf.org/rfc/rfc3986.txt</a></li>
 
       <li><cite id="bib-ietf-rfc-7405">IETF RFC 7405</cite>, Case-Sensitive String Support in ABNF, December 2014 <a>https://www.ietf.org/rfc/rfc7405.txt</a></li>
+      <li><cite id="bib-ag-30">SMPTE AG 30</cite>, Software License <a>https://www.smpte.org/about/policies-and-governance</a></li>
     </ul>
   </section>
   
@@ -39,7 +40,7 @@
     <section id="sec-license">
       <h3>License</h3>
       <p>
-        Any document that (a) is defined by an Engineering Document and (b) conforms to <a href="#bib-w3c-rec-xml-20081126"></a>, whether within the prose or as an Additional Element, shall be licensed according to <a href="#sec-document-license"></a>.
+        Any document that (a) is defined by an Engineering Document and (b) conforms to <a href="#bib-w3c-rec-xml-20081126"></a>, whether within the prose or as an Additional Element, is licensed according to <a href="#bib-ag-30"></a>.
       </p>
     </section>
 
@@ -88,7 +89,7 @@
         </p>
 
 <pre>
-NS = %s"<a>http://www.smpte-ra.org/ns/</a>" PUBNUM "/" REVISION [SHORTNAME]
+NS = %s"http://www.smpte-ra.org/ns/" PUBNUM "/" REVISION [SHORTNAME]
 SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
 PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
 REVISION = STABLEREV / EXPREV
@@ -324,50 +325,14 @@ http://www.smpte-ra.org/ns/456-1/experimental-20141001/foo#hello
       </p>
     </section>
   </section>
-  
-  <section class="annex" id="sec-document-license">
-    <h2>XML Document License</h2>
 
-<pre>
-Copyright (c), Society of Motion Pictures and Television Engineers. All rights
-reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-1. Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright
-notice, this list of conditions and the following disclaimer in the
-documentation and/or other materials provided with the distribution.
-
-3. Neither the name of the copyright holder nor the names of its
-contributors may be used to endorse or promote products derived from
-this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
-IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
-TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
-TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-
-  </section>
 
   <section class="annex" id="sec-element-header">
     <h2>XML Element Header</h2>
 
 <pre>
 &lt;!--
-[[TEXT OF XML DOCUMENT LICENSE OF <a href="#sec-document-license"></a> IN AG-05]]
+[[INSERT TEXT OF THE SOFTWARE LICENSE FOUND IN AG 30]]
 --&gt;
 
 &lt;!--
